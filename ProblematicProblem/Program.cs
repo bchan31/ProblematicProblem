@@ -5,8 +5,7 @@ using System.Threading;
 namespace ProblematicProblem
 {
     public class Program
-    {
-        Random rng;        
+    {        
         static bool cont = true;
         static List<string> activities = new List<string>() { "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
 
@@ -114,9 +113,11 @@ namespace ProblematicProblem
                 }
 
                 Console.Write($"Ah got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
-                Console.WriteLine();
                 cont = BoolParser.GetValue(Console.ReadLine());
+                Console.WriteLine();
             }
+
+            Console.WriteLine("Have Fun!");
         }
     }
 }
